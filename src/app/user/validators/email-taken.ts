@@ -4,15 +4,15 @@ import { AbstractControl, AsyncValidator, ValidationErrors } from '@angular/form
 import { Observable } from 'rxjs';
 
 @Injectable({
-        providedIn: 'root'
+    providedIn: 'root'
 })
 export class EmailTaken implements AsyncValidator {
-    constructor(private auth: AngularFireAuth){
+    constructor(private auth: AngularFireAuth) {
     }
 
     validate = (control: AbstractControl<any, any>): Promise<ValidationErrors | null> | Observable<ValidationErrors | null> => {
         return this.auth.fetchSignInMethodsForEmail(control.value).then(
-            response => response.length ? {emailTaken: true} : null
+            response => response.length ? { emailTaken: true } : null
         );
     }
 
