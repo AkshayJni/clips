@@ -7,7 +7,6 @@ import { InputComponent } from './input/input.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule } from 'ngx-mask';
 import { AlertComponent } from './alert/alert.component';
-import { EventBlockerDirective } from './directives/event-blocker.directive';
 
 @NgModule({
   declarations: [
@@ -15,8 +14,7 @@ import { EventBlockerDirective } from './directives/event-blocker.directive';
     TabsContainerComponent,
     TabComponent,
     InputComponent,
-    AlertComponent,
-    EventBlockerDirective
+    AlertComponent
   ],
   imports: [
     CommonModule,
@@ -28,8 +26,7 @@ import { EventBlockerDirective } from './directives/event-blocker.directive';
     TabsContainerComponent,
     TabComponent,
     InputComponent,
-    AlertComponent,
-    EventBlockerDirective
+    AlertComponent
   ]
 })
 export class SharedModule { }
